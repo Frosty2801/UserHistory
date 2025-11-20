@@ -1,14 +1,14 @@
 
 import csv
 
-Inventario = []
+Inventario = []  # Lista principal del inventario
 
-def agregar_producto():
+def agregar_producto(): # Agregar producto nuevo
     nombre = str(input("Nombre: "))
     precio = float(input("Precio: ")) 
     cantidad = int(input("Cantidad: "))
 
-    Inventario.append({
+    Inventario.append({  # Agregar a la lista
         "nombre": nombre,
         "precio": precio,
         "cantidad": cantidad
@@ -16,7 +16,7 @@ def agregar_producto():
     print("Producto agregado.\n")
 
 
-def mostrar_inventario():
+def mostrar_inventario(): # Mostrar productos existentes
     if not Inventario:
         print("Inventario vacío.\n")
         return
@@ -29,7 +29,7 @@ def mostrar_inventario():
 '''P (PRODUCTO)'''
 
 
-def buscar_producto():
+def buscar_producto():  # Buscar producto por nombre
     nombre = input("Nombre del producto: ")
 
     for p in Inventario:
@@ -38,8 +38,8 @@ def buscar_producto():
             return
     print("No encontrado.\n")
 
-
-def actualizar_producto():
+  
+def actualizar_producto():  # Modificar datos de producto
     nombre = input("Producto a actualizar: ")
 
     for producto in Inventario:
@@ -53,7 +53,7 @@ def actualizar_producto():
             print("Error: Entrada inválida. Intente nuevamente.")
 
 
-def eliminar_producto():
+def eliminar_producto():  # Eliminar producto
     nombre = input("Producto a eliminar: ")
 
     for p in Inventario:
@@ -63,13 +63,13 @@ def eliminar_producto():
             return
     print("No encontrado.\n")
 
-
-def calcular_estadisticas():
+ 
+def calcular_estadisticas():  # Muestra totales del inventario
     if len(Inventario) == 0:
         print("No hay productos para evaluar")
         return
     
-    unidades_totales = sum(p["cantidad"]for p in Inventario)
-    total_inventario = sum(p["precio"] * p["cantidad"] for p in Inventario)
+    unidades_totales = sum(p["cantidad"]for p in Inventario) # Items totales
+    total_inventario = sum(p["precio"] * p["cantidad"] for p in Inventario) # Valor total inventario
     print(f"El inventario tiene un total de: {unidades_totales} productos")
     print(f"Valor total del inventario: ${total_inventario}\n")

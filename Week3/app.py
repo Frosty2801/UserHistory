@@ -9,7 +9,7 @@ from services import (
 from archives import cargar_csv, guardar_csv
 
 
-def menu():
+def menu():  # Menu principal del programa
     while True:
         print(""""
         ===================
@@ -26,11 +26,11 @@ def menu():
         9. salir
         """)
             
-        op = input("elija una opcion: ")
+        op = input("elija una opcion: ")  # Se pide opción al usuario
 
-        if op == "1": agregar_producto()
-        elif op == "2": mostrar_inventario()
-        elif op == "3": buscar_producto()
+        if op == "1": agregar_producto()         # dependiendo de la opcion ejecuta la funcion
+        elif op == "2": mostrar_inventario()      
+        elif op == "3": buscar_producto()         
         elif op == "4": actualizar_producto()
         elif op == "5": eliminar_producto()
         elif op == "6": calcular_estadisticas()
