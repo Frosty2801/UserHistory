@@ -1,0 +1,35 @@
+
+* { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    margin: 20px;
+    text-align: center;
+    color: #2c2971;
+}
+
+body {
+    background: rgb(101, 88, 160);
+}
+
+
+h2 {
+    text-align: center;
+
+}
+
+.container {
+    background: white;
+    display: flex;
+
+}
+
+
+footer {
+    width: 100%;
+    text-align: center;
+    background-color: antiquewhite;
+}
